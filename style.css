@@ -9,10 +9,13 @@
 /* 40px == 2,5rem */
 
 :root{
-    --gray-800: #1E293b;
-    --gray-400:#94a3b8;
-    --purple: #7c3aed;
     --gray-200: #e2e8f0;
+    --gray-400:#94a3b8;
+    --gray-600:#475569;
+    -gray-800: #1E293b;
+    --purple: #7c3aed;
+    
+    --white: #FFF;
 }
 header{
     background-image: url(./imagens/img.png);
@@ -54,6 +57,9 @@ main{
 }
 .login input{
     padding: 1rem 0.75rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 0.25rem;
+    color: var(--gray-800);
 
 }
 .login input::placeholder{
@@ -73,21 +79,34 @@ main{
 .login a:hover {
     text-decoration: underline;
 }
-.login >p{
-    color: var(--gray-400);
+.login button{
+    margin-top: 1 rem;
+    margin-bottom: 2rem;
+    padding-block: 1rem;
+    width: 100%;
+    background:var(--purple);
+    border: none;
+    border-radius: 0.4rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+
 
 
 }
-.login >p a{
+.login >p{
+    color: var(--gray-600)
+};
+.login > p a{
     font-weight: 700;
     font-size: 1rem;
 }
-@media(min-width:1000px){
+@media(min-width: 1000px){
     header{
         background: none;
         justify-content: flex-start;
-        padding-inline: 7rem;
-
+        padding-inline: 7rem;    
     }
     header img{
         width: 10rem;
@@ -97,5 +116,5 @@ main{
         padding-inline: 7rem;
 
     }
-
+    
 }
